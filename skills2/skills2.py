@@ -54,8 +54,25 @@ Bonus: do it on a file instead of the list provided
 Bonus: print the words in alphabetical order in ascending order of length
 """
 def word_length(words):
-    print "Do word_length later, plz"
-word_length('gah')
+	word_lengths={}
+	lengths=[]
+	output_list=[]
+
+	for word in words:
+		word_lengths[len(word)]=word
+
+	for key in word_lengths:
+		lengths.append(key)
+	sorted(lengths)
+
+	for length in lengths:
+		output_list.append(word_lengths[length])
+
+	for word in output_list:
+		print word
+		
+
+word_length(['yo', 'a', 'what', 'sup'])
 
 """
 Here's a table of English to Pirate translations
